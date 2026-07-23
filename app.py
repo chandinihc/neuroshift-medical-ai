@@ -190,6 +190,10 @@ if not st.session_state.get("logged_in", False):
 
 if st.sidebar.button("🚪 Logout"):
 
+    write_audit_log(
+        f"{st.session_state.username} ({st.session_state.role}) logged out"
+    )
+
     st.session_state.clear()
 
     st.rerun()
