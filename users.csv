@@ -1,0 +1,16 @@
+Username,Password,Department,Role
+admin,admin123,Admin,Admin
+Dr Kumar,kumar123,Cardiology,Doctor
+Dr Arjun,arjun123,Cardiology,Doctor
+Dr Mehta,mehta123,General Medicine,Doctor
+Dr Rao,rao123,General Medicine,Doctor
+Dr Sharma,sharma123,Endocrinology,Doctor
+Dr Patel,patel123,Endocrinology,Doctor
+Dr Verma,verma123,Pulmonology,Doctor
+Dr Nair,nair123,Pulmonology,Doctor
+Dr Singh,singh123,Neurology,Doctor
+Dr Gupta,gupta123,Neurology,Doctor
+Dr Reddy,reddy123,Nephrology,Doctor
+Dr Das,das123,Nephrology,Doctor
+Dr Kapoor,kapoor123,Gynecology,Doctor
+Dr Iyer,iyer123,Gynecology,Doctor

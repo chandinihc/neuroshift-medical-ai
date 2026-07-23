@@ -1,0 +1,20 @@
+PatientID,Name,Age,Gender,Department,MedicalHistory,Medication,Doctor,LastVisit,Diagnosis,AIRiskScore,ConsentStatus,Photo
+1002,Priya S,30,Female,General Medicine,No major illness,,Dr Mehta,2026-05-18,Low Risk,18,True,https://randomuser.me/api/portraits/women/2.jpg
+1003,John D,65,Male,Cardiology,Heart Disease and Smoking History,Aspirin,Dr Kumar,2026-05-15,High Risk,92,True,https://randomuser.me/api/portraits/men/3.jpg
+1004,Asha R,28,Female,General Medicine,Healthy,,Dr Rao,2026-05-10,Low Risk,10,False,https://randomuser.me/api/portraits/women/4.jpg
+1005,Vikram P,52,Male,Endocrinology,Type 2 Diabetes,Metformin,Dr Sharma,2026-05-22,High Risk,84,True,https://randomuser.me/api/portraits/men/5.jpg
+1006,Neha M,34,Female,Pulmonology,Asthma,Salbutamol,Dr Patel,2026-05-19,Low Risk,25,True,https://randomuser.me/api/portraits/women/6.jpg
+1007,Arjun N,60,Male,Cardiology,Coronary Artery Disease,Aspirin,Dr Kumar,2026-05-21,High Risk,91,True,https://randomuser.me/api/portraits/men/7.jpg
+1008,Kavya T,25,Female,General Medicine,Healthy,,Dr Rao,2026-05-17,Low Risk,8,True,https://randomuser.me/api/portraits/women/8.jpg
+1009,Rohan C,41,Male,Cardiology,Hypertension,Amlodipine,Dr Sharma,2026-05-12,High Risk,79,True,https://randomuser.me/api/portraits/men/9.jpg
+1010,Meera V,37,Female,Endocrinology,Thyroid Disorder,Levothyroxine,Dr Patel,2026-05-23,Low Risk,30,True,https://randomuser.me/api/portraits/women/10.jpg
+1011,Sanjay H,58,Male,Endocrinology,Diabetes and Obesity,Metformin,Dr Kumar,2026-05-16,High Risk,88,True,https://randomuser.me/api/portraits/men/11.jpg
+1012,Pooja L,29,Female,General Medicine,Anemia,Iron Supplements,Dr Mehta,2026-05-20,Low Risk,22,True,https://randomuser.me/api/portraits/women/12.jpg
+1013,Kiran B,48,Male,Nephrology,Chronic Kidney Disease,Losartan,Dr Sharma,2026-05-11,High Risk,86,False,https://randomuser.me/api/portraits/men/13.jpg
+1014,Divya G,31,Female,Neurology,Migraine,Sumatriptan,Dr Rao,2026-05-13,Low Risk,27,True,https://randomuser.me/api/portraits/women/14.jpg
+1015,Manoj R,67,Male,Cardiology,Heart Failure,Furosemide,Dr Kumar,2026-05-24,High Risk,95,True,https://randomuser.me/api/portraits/men/15.jpg
+1016,Anjali D,26,Female,General Medicine,Healthy,,Dr Mehta,2026-05-21,Low Risk,6,True,https://randomuser.me/api/portraits/women/16.jpg
+1017,Harish S,54,Male,Cardiology,Hypertension and High Cholesterol,Atorvastatin,Dr Sharma,2026-05-18,High Risk,82,True,https://randomuser.me/api/portraits/men/17.jpg
+1018,Nisha K,33,Female,Gynecology,PCOS,Metformin,Dr Patel,2026-05-14,Low Risk,29,True,https://randomuser.me/api/portraits/women/18.jpg
+1019,Praveen J,62,Male,Neurology,Stroke History,Clopidogrel,Dr Kumar,2026-05-25,High Risk,93,False,https://randomuser.me/api/portraits/men/19.jpg
+1020,Shruthi A,27,Female,General Medicine,Healthy,,Dr Rao,2026-05-22,Low Risk,5,True,https://randomuser.me/api/portraits/women/20.jpg
