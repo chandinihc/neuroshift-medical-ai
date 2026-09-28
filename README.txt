@@ -1,44 +1,67 @@
-MEDICAL AI SURGICAL UNLEARNING SYSTEM
+🏥 MEDICAL AI SURGICAL UNLEARNING SYSTEM
 
-Project Overview:
-This application is a Streamlit-based healthcare management system that demonstrates Medical AI Surgical Unlearning.
+**AI-powered healthcare management with privacy-aware data removal**
 
-Features:
+**Can an AI system truly forget a patient's data?**
 
-1. Department-Based Login
-2. Patient Management
-3. AI Risk Assessment Dashboard
-4. Surgical Unlearning (Permanent Patient Data Removal)
-5. Audit Logging
-6. Department-Wise Access Control
+ 💡 THE IDEA
 
-Departments:
+Healthcare systems handle extremely sensitive patient information.
 
-* Cardiology
-* Neurology
-* Pulmonology
-* Endocrinology
-* Nephrology
-* Gynecology
-* General Medicine
+But when a patient asks for their data to be removed, **deleting the record may not be enough** if AI systems have already processed that information.
 
-Technologies Used:
+This project explores **Surgical Unlearning** — the concept of removing patient information from a healthcare system when requested.
 
-* Python
-* Streamlit
-* Pandas
-* Plotly
+✨ WHAT CAN IT DO?
 
-Login Credentials:
+🔐 **Department Login**
+Controlled access for different medical departments.
 
-CARD001 / cardio123
-NEUR001 / neuro123
-PULM001 / pulm123
-ENDO001 / endo123
-NEPH001 / neph123
-GYNE001 / gyne123
-GEN001 / general123
-ADMIN001 / admin123
+👤 **Patient Management**
+Manage authorized patient information.
 
-Project Objective:
-To provide secure patient management with AI monitoring while supporting patient privacy through Surgical Unlearning, allowing complete removal of patient data from the system when requested.
+🤖 **AI Risk Assessment**
+View patient risk information through an interactive dashboard.
+
+🧠 **Surgical Unlearning**
+Remove patient data when an unlearning request is made.
+
+📋 **Audit Logging**
+Track important actions performed in the system.
+
+🛡️ **Access Control**
+Restrict access according to department permissions.
+
+---
+🔄 SYSTEM FLOW
+
+**PATIENT DATA**
+⬇️
+**AI RISK ASSESSMENT**
+⬇️
+**UNLEARNING REQUEST**
+⬇️
+**DATA REMOVAL**
+⬇️
+**AUDIT LOG**
+
+🛠️ TECHNOLOGY
+
+**Python · Streamlit · Pandas · Plotly**
+
+🎯 PROJECT GOAL
+
+**Explore how AI-powered healthcare systems can support both intelligent monitoring and privacy-focused data removal.**
+
+🚀 FUTURE SCOPE
+
+* Real machine-learning unlearning
+* Unlearning verification
+* Secure database integration
+* Advanced privacy mechanisms
+* Stronger encryption
+
+ ⚠️ Educational / Hackathon Prototype
+
+**Not intended for real medical diagnosis or real patient data.**
+
