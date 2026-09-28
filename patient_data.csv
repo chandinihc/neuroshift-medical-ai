@@ -1,7 +1,5 @@
 PatientID,Name,Age,Gender,Department,MedicalHistory,Medication,Doctor,LastVisit,Diagnosis,AIRiskScore,ConsentStatus,Photo
-1002,Priya S,30,Female,General Medicine,No major illness,,Dr Mehta,2026-05-18,Low Risk,18,True,https://randomuser.me/api/portraits/women/2.jpg
 1003,John D,65,Male,Cardiology,Heart Disease and Smoking History,Aspirin,Dr Kumar,2026-05-15,High Risk,92,True,https://randomuser.me/api/portraits/men/3.jpg
-1004,Asha R,28,Female,General Medicine,Healthy,,Dr Rao,2026-05-10,Low Risk,10,False,https://randomuser.me/api/portraits/women/4.jpg
 1005,Vikram P,52,Male,Endocrinology,Type 2 Diabetes,Metformin,Dr Sharma,2026-05-22,High Risk,84,True,https://randomuser.me/api/portraits/men/5.jpg
 1006,Neha M,34,Female,Pulmonology,Asthma,Salbutamol,Dr Patel,2026-05-19,Low Risk,25,True,https://randomuser.me/api/portraits/women/6.jpg
 1007,Arjun N,60,Male,Cardiology,Coronary Artery Disease,Aspirin,Dr Kumar,2026-05-21,High Risk,91,True,https://randomuser.me/api/portraits/men/7.jpg

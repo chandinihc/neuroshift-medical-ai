@@ -72,6 +72,145 @@ def predict_risk(age, medical_history, department):
     return score, diagnosis
 
 
+HOSPITAL_NAME = "NeuroShift Medical Center"
+
+
+def generate_privacy_deletion_certificate(patient_name, hospital_name, deleted_by, deleted_on):
+    """Generate a formal privacy deletion certificate styled like a hospital-issued seal record."""
+
+    certificate = f"""
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Deletion Certificate</title>
+  <style>
+    body {{
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+      color: #1d1d1d;
+    }}
+    .certificate {{
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border: 3px solid #c9b37e;
+      border-radius: 16px;
+      padding: 30px 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      position: relative;
+    }}
+    .header {{
+      text-align: center;
+      margin-bottom: 20px;
+    }}
+    .hospital-name {{
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #1a3f5f;
+    }}
+    .title {{
+      font-size: 30px;
+      font-weight: bold;
+      color: #0d2f43;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }}
+    .seal {{
+      position: absolute;
+      right: 40px;
+      top: 90px;
+      width: 120px;
+      height: 120px;
+      border: 5px solid #a31d1d;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a31d1d;
+      font-size: 26px;
+      font-weight: bold;
+      transform: rotate(-18deg);
+      background: rgba(163, 29, 29, 0.06);
+      text-align: center;
+      line-height: 1.1;
+    }}
+    .details {{
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.9;
+    }}
+    .detail-row {{
+      display: flex;
+      gap: 10px;
+      margin-bottom: 6px;
+    }}
+    .label {{
+      font-weight: bold;
+      min-width: 180px;
+      color: #333;
+    }}
+    .footnote {{
+      margin-top: 28px;
+      font-size: 18px;
+      color: #2f2f2f;
+      line-height: 1.7;
+      border-top: 2px solid #d7d7d7;
+      padding-top: 18px;
+    }}
+    .signature {{
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 16px;
+    }}
+    .line {{
+      border-top: 2px solid #222;
+      width: 220px;
+      margin-top: 40px;
+      text-align: center;
+      padding-top: 8px;
+    }}
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <div class="header">
+      <div class="hospital-name">{hospital_name}</div>
+      <div class="title">Privacy Data Deletion Certificate</div>
+    </div>
+
+    <div class="seal">DELETED</div>
+
+    <div class="details">
+      <div class="detail-row"><div class="label">Patient Name:</div><div>{patient_name}</div></div>
+      <div class="detail-row"><div class="label">Hospital:</div><div>{hospital_name}</div></div>
+      <div class="detail-row"><div class="label">Deleted By:</div><div>{deleted_by}</div></div>
+      <div class="detail-row"><div class="label">Deletion Date:</div><div>{deleted_on}</div></div>
+    </div>
+
+    <div class="footnote">
+      This record has been permanently deleted from the hospital system. The hospital confirms that the patient’s personal and medical information will not be used for any other purpose, will not be shared further, and will not be retained for unnecessary or unrelated use.
+    </div>
+
+    <div class="signature">
+      <div>
+        <div class="line">Authorized Hospital Office</div>
+      </div>
+      <div>
+        <div class="line">Official Hospital Seal</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+"""
+
+    return certificate.strip()
+
 
 # ==============================
 # PAGE CONFIG
@@ -922,7 +1061,13 @@ elif page == "🗑️ Surgical Unlearning":
                 "Name"
             ].iloc[0]
 
-
+            deleted_on = datetime.now().strftime("%Y-%m-%d")
+            certificate_text = generate_privacy_deletion_certificate(
+                patient_name=patient_name,
+                hospital_name=HOSPITAL_NAME,
+                deleted_by=st.session_state.username,
+                deleted_on=deleted_on,
+            )
 
             df = df[
                 df["PatientID"] != patient_id
@@ -942,11 +1087,18 @@ elif page == "🗑️ Surgical Unlearning":
             )
 
 
-
             st.success(
                 "Patient permanently removed"
             )
 
+            st.markdown(certificate_text, unsafe_allow_html=True)
+
+            st.download_button(
+                label="Download Deletion Certificate",
+                data=certificate_text,
+                file_name=f"{patient_name.replace(' ', '_')}_privacy_deletion_certificate.html",
+                mime="text/html",
+            )
 
             st.balloons()
 
